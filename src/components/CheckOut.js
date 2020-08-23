@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const CheckOut = ({fetchCart,updateQuantity,removeProductToCart,items,total_price}) => {
     useEffect(() => {
         fetchCart();
-    })
+    },[fetchCart])
 
     const increamentQuantity = (id,quantity) => {
         quantity =  quantity + 1;

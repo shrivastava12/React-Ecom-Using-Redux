@@ -9,7 +9,7 @@ const UserOrders = ({fetchOrder,items}) => {
 
     useEffect(() => {
         fetchOrder();
-    })
+    },[fetchOrder])
     return(
         <div className="border p-4">
             <div className="text-center billing mb-2">

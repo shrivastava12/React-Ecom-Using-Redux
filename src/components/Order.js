@@ -11,7 +11,7 @@ const Order =  ({createOrder,fetchCart,items,total_price}) => {
     
     useEffect(() => {
         fetchCart();
-    })
+    },[fetchCart])
 
 
     const [fullName,setFullName] = useState('');

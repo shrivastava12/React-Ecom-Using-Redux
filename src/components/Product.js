@@ -11,7 +11,7 @@ const Product = ({isAuthenticated,getAllProduct,products,addProductToCart}) => {
 
     useEffect(() => {
         getAllProduct();
-    })
+    },[getAllProduct])
 
     const addtocart =  (product) => {
         addProductToCart(product);
