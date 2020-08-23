@@ -99,7 +99,7 @@ export const removeProductToCart =  (id) => async(dispatch) =>{
     }
     console.log('id for delete',id);
     try{
-        await Axios.delete(`https://kaprabecho.ml/api/ecom/cart/${id}/`,options).then((response) => {
+        await Axios.delete(`https://www.kaprabecho.ml/api/ecom/cart/${id}/`,options).then((response) => {
             console.log(response.status);
             dispatch(fetchCart());
         }).catch(e => console.log(e))
