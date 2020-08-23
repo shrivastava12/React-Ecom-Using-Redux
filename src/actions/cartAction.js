@@ -1,8 +1,5 @@
 import {
     ADD_PRODUCT_TO_CART,
-    REMOVE_PRODUCT_TO_CART,
-    INCREMENT_CART_ITEM_QUANTITY,
-    DECREMENT_CART_ITEM_QUANTITY,
     FETCH_CART 
 
 } from './Type';
@@ -23,7 +20,7 @@ export const fetchCart =  () => async(dispatch) => {
         };
         await Axios.get('http://127.0.0.1:8000/api/ecom/cart/',options).then((response) => {
             
-            console.log('response',response.data)
+         
             dispatch({
                 type:FETCH_CART,
                 payload:response.data
@@ -38,8 +35,7 @@ export const fetchCart =  () => async(dispatch) => {
 export const addProductToCart = product =>async(dispatch) => {
 
     const Token =localStorage.getItem("token");
-    console.log(Token)
-    console.log('product for add',product);
+    
     try{
         const options = {
             headers: {
@@ -66,46 +62,13 @@ export const addProductToCart = product =>async(dispatch) => {
 
 
 
-export const incrementCartQuantity = productId => dispatch => {
-    let quantity = 1;
-    quantity = quantity + 1;
-    console.log('Increament Item',productId);
-    try{
-
-        Axios.patch('http://127.0.0.1:8000/api/ecom/ordereditem//',{
-            'quantity':'5'
-        }).then((response) => {
-            console.log(response.status);
-        })
-
-        return(
-            dispatch({
-                type:INCREMENT_CART_ITEM_QUANTITY,
-                payload:productId
-            })
-        )
-    }catch(e){
-        console.log(e);
-    }
-};
-
-export const decrementCartQuantity = productId => dispatch => {
-    console.log('Decremented Item',productId);
-    return(
-        dispatch({
-            type:DECREMENT_CART_ITEM_QUANTITY,
-            payload:productId
-        })
-    )
-}
-
 
 
 
 export const updateQuantity = (id,quantity) => async(dispatch) => {
     
     const Token =localStorage.getItem("token");
-    console.log('quantity for update',quantity);
+   
     try{
         const options = {
             headers: {

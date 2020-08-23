@@ -10,14 +10,11 @@ import { logout } from "../actions/authAction";
 
 const Header =  ({isAuthenticated,logout}) => {
 
-  const logoutSuccess = () => {
-    logout();
-  }
-
+  
     return(
         
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a className="navbar-brand" href="#">KapraBecho.com</a>
+                <Link className="navbar-brand" to='/'>KapraBecho.com</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>
@@ -42,7 +39,7 @@ const Header =  ({isAuthenticated,logout}) => {
                       <Link className="nav-link" to='/user/profile'><CgProfile/></Link>
                       </li>
                       <li className="nav-item active">
-                      <Link className="nav-link" onClick={logout} >Logout</Link>
+                      <Link className="nav-link" to='' onClick={logout} >Logout</Link>
                       </li></>
                      ) : (
                        <>

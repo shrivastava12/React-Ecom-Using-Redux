@@ -13,9 +13,7 @@ const initialState = {
 
 export default function(state = initialState,action){
     const {type,payload} =  action;
-    let updatedCart;
-    let updatedItemIndex;
-   
+  
     switch(type){
 
         case FETCH_CART:

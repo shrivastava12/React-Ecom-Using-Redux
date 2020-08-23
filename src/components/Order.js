@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { createOrder } from "../actions/orderAction";
 import { connect } from "react-redux";
 import { fetchCart } from "../actions/cartAction";
-import { Redirect } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { toast,ToastContainer } from 'react-toastify';
 

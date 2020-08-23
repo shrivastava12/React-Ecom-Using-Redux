@@ -45,7 +45,7 @@ const CheckOut = ({fetchCart,updateQuantity,removeProductToCart,items,total_pric
                     {
                         items.map((item) => (
                         <tr key={item.id}>
-                            <th scope="row">   <img className="img-thumbnail" height="50" width="50" src={item.product.image}  /></th>
+                            <th scope="row">   <img className="img-thumbnail" alt="imagdfsde" height="50" width="50" src={item.product.image}  /></th>
                           
                             <td>
                                 {item.product.name}

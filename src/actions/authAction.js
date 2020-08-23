@@ -15,7 +15,7 @@ export const register =  (username,email,password) => async(dispatch) => {
         email:email,
         password:password
     }).then((res) => {
-        console.log(res);
+       
         dispatch({
             type:REGISTER_SUCCESS,
             payload:res.data

@@ -6,9 +6,9 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Header from './components/Header';
-import Cart from './components/Cart';
+
 import CheckOut from './components/CheckOut';
-import test from './components/test';
+
 import Order from './components/Order';
 import Profile from './components/Profile';
 
@@ -23,9 +23,9 @@ const App = ()  => (
         <Route exact path='/' component={Home} />
         <Route exact path='/login' component={Login}/>
         <Route exact path='/signup' component={Signup}/>
-        <Route exact path='/cart' component={Cart}/> 
+       
         <Route exact path='/checkout' component={CheckOut}/>
-        <Route exact path='/test' component={test}/>
+      
         <Route exact path='/order' component={Order}/>
         <Route exact path='/user/profile' component={Profile}/>
       </Switch>

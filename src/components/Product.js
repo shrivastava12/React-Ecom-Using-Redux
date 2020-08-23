@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
 import { getAllProduct } from '../actions/productAction';
 
 import { connect } from 'react-redux';
@@ -29,24 +28,24 @@ const Product = ({isAuthenticated,getAllProduct,products,addProductToCart}) => {
 
     return(
         
-       <div className="row  mb-5">
+       <div className="row mb-5">
   {
                 products.map((product) => (
                     <div key={product.id} className="col-lg-4 mt-5">
-                         <div class="card">
-            <img class="card-img-top img-thumbnail" src={product.image} alt="Card image cap"/>
-            <div class="card-body">
-            <div class="d-flex justify-content-start">
-            <h5 class="card-title">{product.name}
+                         <div className="card">
+            <img className="card-img-top img-thumbnail" alt="imagename" src={product.image} />
+            <div className="card-body">
+            <div className="d-flex justify-content-start">
+            <h5 className="card-title">{product.name}
                 <span className="card-text ml-3">${product.price}</span>
             </h5>
               
             </div>
                 
-            <div class="d-flex justify-content-end">
+            <div className="d-flex justify-content-end">
             <button 
                 onClick={() => addtocart(product)}
-             class="btn btn-secondary">Add to Cart</button>
+             className="btn btn-secondary">Add to Cart</button>
              
             </div>
           
