@@ -23,7 +23,7 @@ const Signup =  ({register,isAuthenticated}) => {
         <div className="d-flex mb-5 mt-5 justify-content-center">
         <div className="container bg-dark">
         <div className="card mt-5 mr-5 ml-5 mb-5">
-            <div className="card-body border mt-5 mr-5 ml-5 mb-5">
+            <div className="card-body border ">
             <div className="card-title text-center login">SignUp</div>
             
                  
