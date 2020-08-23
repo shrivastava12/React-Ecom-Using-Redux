@@ -5,7 +5,7 @@ import Axios from "axios";
 export const createOrder = (order) => async(dispatch) => {
 
     const Token = localStorage.getItem('token');
-    await fetch('https://kaprabecho.ml/api/ecom/orders/',{
+    await fetch('https://www.kaprabecho.ml/api/ecom/orders/',{
         method:"POST",
         body:JSON.stringify(order),
         headers:{
@@ -32,7 +32,7 @@ export const fetchOrder =  () => async(dispatch) => {
                 'Authorization':`Token ${Token}`
             }
           };
-          await Axios.get('https://kaprabecho.ml/api/ecom/orders/',options).then((response) => {
+          await Axios.get('https://www.kaprabecho.ml/api/ecom/orders/',options).then((response) => {
               console.log(response.data);
               dispatch({
                   type:FETCH_ORDER,

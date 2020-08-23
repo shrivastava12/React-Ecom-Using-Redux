@@ -113,7 +113,7 @@ const Order =  ({createOrder,fetchCart,items,total_price}) => {
                 <div className="col-lg-4 p-4 border">
                     <h2 className="text-center billing">Cart Summery</h2>
                     <div>
-                    <table class="table">
+                    <table className="table">
                         <thead>
                             <tr>
                             <th scope="col">Name</th>
@@ -139,7 +139,7 @@ const Order =  ({createOrder,fetchCart,items,total_price}) => {
 
 
 
-                     <table class="table">
+                     <table className="table">
                         <thead>
                             <tr className="tab">
                             <th scope="col">Total</th>

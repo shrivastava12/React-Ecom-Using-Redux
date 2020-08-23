@@ -18,7 +18,7 @@ export const fetchCart =  () => async(dispatch) => {
                 'Authorization':`Token ${Token}`
             }
         };
-        await Axios.get('https://kaprabecho.ml/api/ecom/cart/',options).then((response) => {
+        await Axios.get('https://www.kaprabecho.ml/api/ecom/cart/',options).then((response) => {
             
          
             dispatch({
@@ -43,7 +43,7 @@ export const addProductToCart = product =>async(dispatch) => {
                 'Authorization':`Token ${Token}`
             }
           };
-        await Axios.post('https://kaprabecho.ml/api/ecom/cart/',{
+        await Axios.post('https://www.kaprabecho.ml/api/ecom/cart/',{
             product:product.id
         },options).then((response) => {
                 console.log(response.data)
@@ -77,7 +77,7 @@ export const updateQuantity = (id,quantity) => async(dispatch) => {
             }
         }
 
-        await Axios.patch(`https://kaprabecho.ml/api/ecom/cart/${id}/`,{
+        await Axios.patch(`https://www.kaprabecho.ml/api/ecom/cart/${id}/`,{
             quantity:quantity
         },options).then((response) => {
             console.log('updated_data',response.data);
