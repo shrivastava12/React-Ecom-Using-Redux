@@ -5,7 +5,7 @@ import {ToastContainer} from "react-toastify"
 import '../App.css'
 const Home =  () => {
     return(
-        <div className="container-fluid p-5 home ">
+        <div className="container-fluid p-3 home ">
              <ToastContainer/>
 
            <div className="container  ">
