@@ -18,7 +18,7 @@ export const fetchCart =  () => async(dispatch) => {
                 'Authorization':`Token ${Token}`
             }
         };
-        await Axios.get('http://127.0.0.1:8000/api/ecom/cart/',options).then((response) => {
+        await Axios.get('https://kaprabecho.ml/api/ecom/cart/',options).then((response) => {
             
          
             dispatch({
@@ -43,7 +43,7 @@ export const addProductToCart = product =>async(dispatch) => {
                 'Authorization':`Token ${Token}`
             }
           };
-        await Axios.post('http://127.0.0.1:8000/api/ecom/cart/',{
+        await Axios.post('https://kaprabecho.ml/api/ecom/cart/',{
             product:product.id
         },options).then((response) => {
                 console.log(response.data)
@@ -77,7 +77,7 @@ export const updateQuantity = (id,quantity) => async(dispatch) => {
             }
         }
 
-        await Axios.patch(`http://127.0.0.1:8000/api/ecom/cart/${id}/`,{
+        await Axios.patch(`https://kaprabecho.ml/api/ecom/cart/${id}/`,{
             quantity:quantity
         },options).then((response) => {
             console.log('updated_data',response.data);
@@ -99,7 +99,7 @@ export const removeProductToCart =  (id) => async(dispatch) =>{
     }
     console.log('id for delete',id);
     try{
-        await Axios.delete(`http://127.0.0.1:8000/api/ecom/cart/${id}/`,options).then((response) => {
+        await Axios.delete(`https://kaprabecho.ml/api/ecom/cart/${id}/`,options).then((response) => {
             console.log(response.status);
             dispatch(fetchCart());
         }).catch(e => console.log(e))

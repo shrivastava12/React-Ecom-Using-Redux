@@ -10,7 +10,7 @@ import Axios from 'axios';
 
 export const register =  (username,email,password) => async(dispatch) => {
    try{
-     Axios.post('http://127.0.0.1:8000/api/account/auth/register',{
+     Axios.post('https://kaprabecho.ml/api/account/auth/register',{
         username:username,
         email:email,
         password:password
@@ -33,7 +33,7 @@ export const register =  (username,email,password) => async(dispatch) => {
 
 export const login = (username,password) =>async(dispatch) =>{
     try{
-        await Axios.post('http://127.0.0.1:8000/api/account/auth/login',{
+        await Axios.post('https://kaprabecho.ml/api/account/auth/login',{
             username:username,
             password:password
         }).then((res) => {
@@ -57,7 +57,7 @@ export const login = (username,password) =>async(dispatch) =>{
 export const logout = () => async(dispatch) => {
 
     const Token = sessionStorage.getItem('token');
-    await fetch('http://127.0.0.1:8000/api/account/auth/logout',{
+    await fetch('https://kaprabecho.ml/api/account/auth/logout',{
         method:"POST",
         headers:{
             "Content-type": "application/json; charset=UTF-8",

@@ -8,7 +8,7 @@ import Axios from "axios";
  export const getAllProduct = () => async(dispatch) => {
 
     try{
-        Axios.get('http://127.0.0.1:8000/api/ecom/product/').then((res) => {
+        Axios.get('https://www.kaprabecho.ml/api/ecom/product/').then((res) => {
             console.log('product',res.data)
             dispatch({
                 type:PRODUCT_LIST_SUCCESS,
@@ -27,7 +27,7 @@ import Axios from "axios";
 
  export const getSingleProduct =  async(id) => dispatch => {
      try{
-         Axios.get(`http://127.0.0.1:8000/api/ecom/product/${id}/`).then((res) => {
+         Axios.get(`https://www.kaprabecho.ml/api/ecom/product/${id}/`).then((res) => {
              console.log(res.data);
              dispatch({
                  type:PRODUCT_DETAIL_SUCCESS,
