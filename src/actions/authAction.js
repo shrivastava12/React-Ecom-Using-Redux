@@ -75,7 +75,3 @@ export const logout = () => async(dispatch) => {
 
 }
 
-export const getToken = () => {
-    const Token = localStorage.getItem('token');
-    return Token;
-}

@@ -4,12 +4,13 @@ import {
 
 } from './Type';
 import Axios from 'axios';
-import { getToken } from './authAction';
+
 
 
 
 export const fetchCart =  () => async(dispatch) => {
-    const Token =  getToken();
+   
+    const Token =localStorage.getItem("token");
     try{
         
         const options = {
