@@ -40,6 +40,7 @@ const Order =  ({createOrder,fetchCart,items,total_price}) => {
             toast('Ordered SuccessFully',{
                 type:'info'
             })
+            fetchCart();
     
         }else{
             toast('Please Add Item to the cart',{
